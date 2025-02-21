@@ -11,7 +11,10 @@
     margin: auto;
     text-align: center;
 }
-      
+      .verde {
+            background-color: green;
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -123,5 +126,16 @@
         </tr>
     </table>
     <p>titulo javascript </p>
+    <p>boton </p>
+     <button type="button" id="miBoton" style="background-color: red; color: white; padding: 10px 20px; border: none; cursor: pointer;">
+        Danger
+    </button>
+
+    <script>
+    document.getElementById("miBoton").addEventListener("click", function() {
+        this.style.backgroundColor = ""; // Elimina el color en línea
+        this.classList.add("verde"); // Agrega la clase con el color verde
+    });
+</script>
 </body>
 </html>
